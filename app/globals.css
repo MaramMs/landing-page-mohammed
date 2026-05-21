@@ -1,26 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary:        #1A5EBB;
+  --color-primary-dark:   #0F3D7A;
+  --color-primary-light:  #2D7DD2;
+  --color-accent:         #FFB800;
+  --color-surface:        #F5F8FF;
+  --font-family-arabic:   'Cairo', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+* { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a2e;
+  direction: rtl;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-primary-dark transition-all duration-300
+           shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-xl
+           font-semibold hover:bg-primary hover:text-white transition-all duration-300;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-primary-dark mb-4;
+  }
+  .section-subtitle {
+    @apply text-gray-500 text-lg mb-10;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl
+           transition-all duration-300 hover:-translate-y-1;
+  }
 }

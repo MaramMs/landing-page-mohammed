@@ -54,10 +54,10 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden border-b border-[#4D96FF33] bg-[#FAFAFA] pt-28 pb-8 md:pt-32 md:pb-12 min-h-[664px]"
+      className="relative overflow-hidden border-b border-[#4D96FF33] bg-[#FAFAFA] pt-28 pb-8 md:pt-[25px] md:pb-0 min-h-[400px]"
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="grid grid-cols-1  gap-[5px] lg:grid-cols-3 lg:gap-[5px] xl:gap-[5px]">
+        <div className="grid grid-cols-1  gap-[5px] lg:grid-cols-3 lg:gap-[5px] xl:gap-[5px] items-center">
           {/* Headline — visual right in RTL */}
           <div className="order-1 flex flex-col gap-6  lg:order-1 md:col-span-1 ">
             <div className="flex flex-col gap-[12px]">
@@ -78,29 +78,20 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1">
-            {/* <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px]"> */}
-              {/* <Image
-                src="/assets/hero.png"
-                alt="محمد العنيني — المؤثر السعودي"
-                width={490}
-                height={639}
-                priority
-                className="relative z-10 mx-auto h-auto w-full object-contain top-[-10%]  rotate-y-180 after:content-'' "
-              /> */}
+    <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1 after:content-[''] after:absolute after:rounded-full after:blur-[50px] after:w-[790px] after:aspect-square after:bg-[linear-gradient(163.37deg,rgba(77,150,255,0.6)_29.9%,rgba(70,137,232,0)_92.81%)] after:z-[1] after:translate-x-[22%] after:-translate-y-[11%]">
 
-<div className="relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[#EDF5FF] after:via-[#EDF5FF]/40 after:to-transparent after:z-20">
+<div className="relative  ">
   <Image
     src="/assets/hero.png"
     alt="محمد العنيني — المؤثر السعودي"
     width={490}
     height={639}
     priority
-    className="relative z-10 mx-auto h-auto w-full object-contain top-[-10%] rotate-y-180"
+    className="relative z-10 mx-auto h-[600px] w-full object-contain top-[-10%] rotate-y-180 left-[10%]"
   />
 </div>
               {/* <div className=" "> */}
-                <div className="absolute left-[-28%] bottom-[25%] z-20  min-w-[237px] flex items-center justify-center gap-2 rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] px-[20px] py-[8px] shadow-lg sm:gap-3 sm:px-5 sm:py-3">
+                <div className="absolute left-[-28%] bottom-[11%] z-20  min-w-[237px] flex items-center justify-center gap-2 rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] px-[20px] py-[8px] shadow-lg sm:gap-3 sm:px-5 sm:py-3">
                  
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#203F6B] sm:size-8">
                     <BsPatchCheck size={18} className="text-white" />
@@ -115,36 +106,36 @@ const Hero = () => {
           </div>
 
           {/* About — visual left in RTL */}
-          <div className="order-3 flex flex-col gap-8 lg:order-3 md:col-span-1 ">
-            <div className="flex flex-col gap-4">
-              <h2 className="text-[28px] font-extrabold text-[#203F6B] sm:text-[32px]">
+          <div className="order-3 flex flex-col gap-4 lg:order-3 md:col-span-1 ">
+              <h2 className="text-[40px] font-bold text-[#203F6B] sm:text-[32px]">
                 من أنا
               </h2>
-              <div className="relative pr-1">
-                <span
-                  className="absolute -top-1 right-0 text-[32px] font-serif leading-none text-[#4D96FF]"
+         
+
+            <div className="flex flex-col gap-4">
+
+                   <div className="relative pr-1">
+            
+                <p className="text-[16px] leading-[1.75] font-medium text-[#203F6B] sm:text-[15px]">
+                صانع محتوى ومؤثر سعودي، مختص بمشاركة العروض والخصومات والتغطيات الإعلامية عبر المنصات الرسمية في السعودية - المدينة المنورة وما جوارها.
+                </p>
+                    <span
+                  className="absolute -bottom-1 left-10 text-[32px] font-serif leading-none text-[#4D96FF]"
                   aria-hidden
                 >
                   &ldquo;
                 </span>
-                <p className="text-[14px] leading-[1.75] font-medium text-[#376BB5] sm:text-[15px]">
-                  صانع محتوى ومؤثر سعودي متخصص في عروض ينبع الحصرية، أشارك أقوى
-                  التخفيضات والعروض مع متابعيّ عبر المنصات الرسمية الموثّقة.
-                </p>
               </div>
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <div className="grid grid-cols-3 gap-4 border-b border-[#203F6B1A] pb-6">
+              <div className="grid grid-cols-3 gap-6 border-b border-[#203F6B1A] pb-6 ">
                 {STATS.map((stat) => (
                   <div
                     key={stat.label}
                     className="flex flex-col items-center gap-1 text-center lg:items-start lg:text-right"
                   >
-                    <span className="text-[22px] font-extrabold text-[#4D96FF] sm:text-[24px]">
+                    <span className="text-[24px] font-bold text-[#4D96FF] sm:text-[24px]">
                       {stat.value}
                     </span>
-                    <span className="text-[11px] font-medium leading-snug text-[#525252] sm:text-[12px]">
+                    <span className="text-[12px] font-normal leading-snug text-[#203F6B] sm:text-[12px]">
                       {stat.label}
                     </span>
                   </div>
@@ -178,4 +169,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+ 
 

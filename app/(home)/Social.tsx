@@ -13,18 +13,18 @@ import { BsPatchCheck } from "react-icons/bs";
 const Social = () => {
   return (
     <div className="bg-[#EDF5FF] ">
-      <div className="max-w-7xl mx-auto py-25">
+      <div className="max-w-7xl mx-auto py-[60px] px-[16px] md:px-0 md:py-25">
         <div className="grid md:grid-cols-2 gap-10">
-          <div className="col-span-1 flex flex-col items-start gap-6 m-auto">
+          <div className=" order-2 md:order-1 col-span-1 flex flex-col items-start gap-6 m-auto">
             <div className="flex flex-col items-start gap-2">
               <span className="text-[#EAEBF4] min-h-7 min-w-32 rounded-[50px] font-semibold text-[12px] border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF,4.33%,#203F6B_100%)] py-2 px-5">
                 الحسابات الرسمية
               </span>
-              <h2 className="text-[#203F6B] mt-5 text-[40px] font-extrabold">
+              <h2 className="text-[#203F6B] mt-2 md:mt-5 text-[32px] md:text-[40px] font-extrabold">
                 تابعني عبر المنصات الرسمية
               </h2>
             </div>
-            <p className="text-[#203F6B] text-[16px] font-medium w-[50%]">
+            <p className="text-[#203F6B] text-[16px] font-medium md:w-[50%]">
               جميع الحسابات الرسمية لمحمد العنيني اختر المنصة المفضلة لديك
             </p>
             <ul className="flex items-center gap-4">
@@ -87,17 +87,17 @@ const Social = () => {
             </ul>
           </div>
 
-          <div className="col-span-1 flex justify-end relative">
+          <div className="order-1 md:order-2 col-span-1 flex justify-center md:justify-end relative">
             <div className="rounded-3xl overflow-hidden  max-w-99 ">
-          <div className="relative">
+          <div className="relative h-[325px] md:h-[517px]">
           <Image
                 src={socialImg}
                 alt="محمد العنيني"
                 width={396}
                 height={517}
-                className="rounded-[3xl] "
+                className="rounded-[3xl] w-[248px] h-[325px] md:w-[396px] md:h-[517px] object-cover "
               />
-              <div className=" absolute  top-0 left-0 right-0 bottom-0 bg-[linear-gradient(180deg,rgba(47,105,229,0)_0%,#2B3A91_100%)] flex flex-col items-center justify-center p-4 text-center gap-[4px]">
+              <div className=" absolute  top-0 left-0 right-0 bottom-0 bg-[linear-gradient(180deg,rgba(47,105,229,0)_0%,#2B3A91_138%)] flex flex-col items-center justify-center p-4 text-center gap-[4px]">
                 <p className="text-[#EAEBF4] text-[12px]">محمد العنيني</p>
                 <p className="text-[16px] text-[#EAEBF4]">المؤثر السعودي</p>
               </div>
@@ -106,10 +106,10 @@ const Social = () => {
          
             </div>
 
-            <div className="z-9999 border border-[#4D96FF80] absolute  top-[10%]  right-[19%] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] flex  items-center justify-center  text-center gap-[6.4px] rounded-[50px] py-[8px] px-[20px]">
-                <BsPatchCheck color="white" size={24} />
-                <p className="text-[#EAEBF4] text-[12px] font-semibold">
-                  جميع الحسابات موثقة ومُعتمدة رسميا
+            <div className="z-9999 border border-[#4D96FF80] absolute  top-[6%] md:top-[10%] right-[-2%]  md:right-[19%] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] flex  items-center justify-center  text-center gap-[6.4px] rounded-[50px] py-[8px] px-[20px]">
+                <BsPatchCheck color="white"  className="text-[16px] md:text-[24px]"/>
+                <p className="text-[#EAEBF4] text-[10px] md:text-[12px] font-semibold">
+            جميع الحسابات موثقة ومُعتمدة 
                 </p>
               </div>
           </div>

@@ -1,10 +1,10 @@
 const DiscountBadge = () => {
   return (
     <div
-      className="pointer-events-none absolute top-0 left-[6%] z-0 hidden -translate-x-[38%] -translate-y-[32%] md:block"
+      className="pointer-events-none absolute left-[22%] md:top-0 md:left-[6%] z-0  -translate-x-[38%] -translate-y-[32%] block"
       aria-hidden
     >
-      <div className="relative size-[514px]">
+      <div className="relative w-[124px] h-[126px] md:size-[514px]">
         <div className="absolute inset-0 rounded-full bg-[#EDF5FF]/60" />
 
         <svg

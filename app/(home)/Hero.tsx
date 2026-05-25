@@ -54,7 +54,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden border-b border-[#4D96FF33] bg-[#FAFAFA] pt-28 pb-8 md:pt-[25px] md:pb-0 min-h-[400px]"
+      className="relative overflow-hidden border-b border-[#4D96FF33] bg-[#FAFAFA] py-[60px] px-[16px]   md:pt-[25px] md:pb-0 md:min-h-[400px]"
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid grid-cols-1  gap-[5px] lg:grid-cols-3 lg:gap-[5px] xl:gap-[5px] items-center">
@@ -64,9 +64,10 @@ const Hero = () => {
               <p className="text-[20px] font-bold text-[#203F6B] md:text-[40px]">
                 محمد العنيني
               </p>
-              <h1 className="text-[48px] font-extrabold leading-[1.05] tracking-tight text-[#203F6B] sm:text-[56px] xl:text-[64px]">
-                <span className="block">المؤثر</span>
-                <span className="block">السعودي</span>
+              <h1 className="text-[32px] md:text-[72px] font-extrabold leading-[1.05] tracking-tight text-[#203F6B]  xl:text-[64px]">
+                المؤثر السعودي
+                {/* <span className="block">المؤثر</span>
+                <span className="block">السعودي</span> */}
               </h1>
             </div>
             <Link
@@ -78,7 +79,7 @@ const Hero = () => {
             </Link>
           </div>
 
-    <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1 after:content-[''] after:absolute after:rounded-full after:blur-[50px] after:w-[790px] after:aspect-square after:bg-[linear-gradient(163.37deg,rgba(77,150,255,0.6)_29.9%,rgba(70,137,232,0)_92.81%)] after:z-[1] after:translate-x-[22%] after:-translate-y-[11%]">
+    <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1 after:content-[''] after:absolute after:rounded-full after:blur-[140px] after:w-[331px] md:after:w-[790px] after:aspect-square after:bg-[linear-gradient(163.37deg,rgba(77,150,255,0.6)_29.9%,rgba(70,137,232,0)_92.81%)] after:z-[1] after:translate-x-[0%]  md:after:translate-x-[22%] after:translate-y-[30%]  md:after:-translate-y-[11%]">
 
 <div className="relative  ">
   <Image
@@ -87,16 +88,16 @@ const Hero = () => {
     width={490}
     height={639}
     priority
-    className="relative z-10 mx-auto h-[600px] w-full object-contain top-[-10%] rotate-y-180 left-[10%]"
+    className="relative z-10 mx-auto h-[317px] md:h-[600px] w-full object-contain top-[-10%] rotate-y-180 left-[10%]"
   />
 </div>
               {/* <div className=" "> */}
-                <div className="absolute left-[-28%] bottom-[11%] z-20  min-w-[237px] flex items-center justify-center gap-2 rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] px-[20px] py-[8px] shadow-lg sm:gap-3 sm:px-5 sm:py-3">
+                <div className="absolute left-[25%] md:left-[-28%] bottom-[5%] md:bottom-[11%] z-20  md:min-w-[237px] flex items-center justify-center gap-2 rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] md:px-[20px] md:py-[8px] shadow-lg sm:gap-3 px-[8px] py-[4px]">
                  
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#203F6B] sm:size-8">
                     <BsPatchCheck size={18} className="text-white" />
                   </span>
-                  <span className="text-center text-[11px] font-semibold leading-snug text-[#EAEBF4] sm:text-[12px]">
+                  <span className="text-center md:text-[12px] font-semibold leading-snug text-[#EAEBF4] text-[10px]">
                     الصفحة الرسمية للمؤثر السعودي
                   </span>
                
@@ -107,7 +108,7 @@ const Hero = () => {
 
           {/* About — visual left in RTL */}
           <div className="order-3 flex flex-col gap-4 lg:order-3 md:col-span-1 ">
-              <h2 className="text-[40px] font-bold text-[#203F6B] sm:text-[32px]">
+              <h2 className="text-center md:text-right md:text-[40px] font-bold text-[#203F6B] text-[32px]">
                 من أنا
               </h2>
          

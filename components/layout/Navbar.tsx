@@ -43,7 +43,7 @@ export default function Navbar() {
 
         
        
-          <button className="bg-[#4D96FF] text-white  text-sm py-[12px] px-[24px] rounded-2xl">تابعني</button>
+          <button className="bg-[#4D96FF] text-white  text-sm py-[12px] px-[24px] rounded-2xl hidden md:block">تابعني</button>
         
 
         {/* Mobile Menu Toggle */}

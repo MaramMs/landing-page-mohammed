@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
@@ -17,14 +18,14 @@ export default function Navbar() {
     <nav className="sticky top-0 right-0 left-0 z-50 bg-[#FAFAFA] backdrop-blur-md shadow-sm border-b border-[#12183D] border-width-[0.5px]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <a href="#hero" className="flex items-center gap-3 cursor-pointer">
           <div className="w-9.5 h-9.5 rounded-[50%] flex items-center justify-center">
             <img src='/assets/person.jpg' alt="Logo" className="w-9.5 h-9.5 rounded-[50%]" />
           </div>
           <div>
             <p className="font-bold text-[#4D96FF] text-[18px] leading-tight">العنيني | aloniniyb</p>
           </div>
-        </div>
+        </a>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-7">
@@ -41,8 +42,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button id="social" className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl hidden md:block cursor-pointer">تابعني</button>
+        <button
 
+  className="
+    hidden md:block
+    cursor-pointer
+    rounded-2xl
+    bg-[#4D96FF]
+    px-6 py-3
+    text-sm font-medium text-white
+    transition-all duration-300 ease-out
+    hover:-translate-y-1
+    hover:bg-[#3b82f6]
+    hover:shadow-[0_10px_25px_rgba(77,150,255,0.35)]
+    active:translate-y-0
+  "
+>
+  تابعني
+</button>
         {/* Mobile Menu Toggle */}
         <button
           className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition cursor-pointer"

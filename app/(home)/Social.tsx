@@ -8,7 +8,6 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import socialImg from "../../public/assets/social-img.jpg";
-import { BsPatchCheck } from "react-icons/bs";
 import { HiCheckBadge } from "react-icons/hi2";
 
 const Social = () => {

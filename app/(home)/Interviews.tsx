@@ -10,7 +10,7 @@ const Interviews = () => {
     <section id='interview' className="bg-[#EDF5FF] py-[60px] px-[16px] md:py-[100px]">
       <div className="max-w-7xl mx-auto py-2">
         <div className="flex flex-col gap-[40px] ">
-          <div className="flex flex-col items-start md:gap-[16px]">
+          <div className="flex flex-col items-start gap-[16px]">
             <div className="relative flex flex-col items-center gap-2 w-fit ">
               <span className="text-[#EAEBF4] min-h-7 min-w-32 rounded-[50px] font-semibold text-[12px] border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] py-2 px-5 text-center">
                 التغطيات الإعلامية

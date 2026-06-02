@@ -41,7 +41,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl hidden md:block">تابعني</button>
+        <button id="social" className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl hidden md:block cursor-pointer">تابعني</button>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -71,7 +71,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <button className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl w-full">تابعني</button>
+          <button className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl w-full cursor-pointer">تابعني</button>
         </div>
       )}
     </nav>

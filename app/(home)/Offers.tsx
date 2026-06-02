@@ -64,6 +64,70 @@ const StepIcon = ({
     </div>
   </div>
 );
+const CurveTop = () => (
+<svg width="169" height="100" viewBox="0 0 169 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.500057 49.9434C69.2691 3.10615 106.119 7.78272 168.366 51.36" stroke="#203F6B" stroke-linecap="round" stroke-dasharray="6 6"/>
+</svg>
+
+
+);
+
+const CurveBottom = () => (
+  <svg width="169" height="100" viewBox="0 0 169 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.500057 50.0566C69.2691 96.8938 106.119 92.2173 168.366 48.64" stroke="#203F6B" stroke-linecap="round" stroke-dasharray="6 6"/>
+</svg>
+);
+
+const CurveRight = () => (
+<svg width="53" height="98" viewBox="0 0 53 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.4538 96.6305C-7.35732 57.2493 -4.68022 36.1465 20.265 0.500083" stroke="#203F6B" stroke-linecap="round" stroke-dasharray="6 6"/>
+</svg>
+
+);
+
+
+const CurveLeft = () => (
+<svg width="21" height="98" viewBox="0 0 21 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.31132 96.6305C28.1225 57.2493 25.4454 36.1465 0.500093 0.500083" stroke="#203F6B" stroke-linecap="round" stroke-dasharray="6 6"/>
+</svg>
+
+
+);
+
+<div className="flex flex-col items-center md:hidden">
+  {STEPS.map((step, index) => (
+    <div
+      key={step.number}
+      className="flex flex-col items-center text-center"
+    >
+      <StepIcon
+        number={step.number}
+        icon={step.icon}
+        variant={step.variant}
+      />
+
+      <h4 className="mt-6 text-[32px] font-bold text-[#203F6B]">
+        {step.title}
+      </h4>
+
+      <p className="mt-3 max-w-[260px] text-[14px] leading-[22px] text-[#525252]">
+        {step.description}
+      </p>
+
+      {index < STEPS.length - 1 && (
+        <div className="my-8">
+          {index % 2 === 0 ? (
+            <CurveRight />
+          ) : (
+            <CurveLeft />
+          )}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
+
 
 const Offers = () => {
   return (
@@ -86,44 +150,75 @@ const Offers = () => {
               يمكن للمتابع الاستفادة من الخصومات بسهولة عبر
             </p>
           </div>
+          <div className="relative w-full max-w-[960px]">
+  {/* Mobile */}
+  <div className="flex flex-col items-center md:hidden">
+  {STEPS.map((step, index) => (
+    <div
+      key={step.number}
+      className="flex flex-col items-center text-center"
+    >
+      <StepIcon
+        number={step.number}
+        icon={step.icon}
+        variant={step.variant}
+      />
 
-          {/* Stepper */}
-          <div className="relative w-full">
-    
-                    {/* Cleaned up grid gap classes */}
-            <div className="relative z-10 grid grid-cols-1 gap-[24px] md:grid-cols-5 md:gap-8 justify-center ">
-              {STEPS.map((step) => (
-            <>
-                <div
-                  key={step.number}
-                  className="flex flex-col items-center gap-[24px] md:gap-8 text-center"
-                >
-                  <StepIcon
-                    number={step.number}
-                    icon={step.icon}
-                    variant={step.variant}
-                  />
-                  <div className="flex flex-col items-center gap-4">
-                    <h4 className="text-[24px] font-bold text-[#203F6B]">
-                      {step.title}
-                    </h4>
-                    <p className="max-w-[308px] md:max-w-[280px] text-[14px] leading-[1.6] font-medium text-[#525252]">
-                      {step.description}
-                    </p>
-                  </div>
+      <h4 className="mt-6 text-[32px] font-bold text-[#203F6B]">
+        {step.title}
+      </h4>
 
-                
-                </div>
+      <p className="mt-3 max-w-[260px] text-[14px] leading-[22px] text-[#525252]">
+        {step.description}
+      </p>
 
-{step.curve && (
-  <div className=" flex items-center justify-center">
-     {step.curve}
+      {index < STEPS.length - 1 && (
+        <div className="my-8">
+          {index % 2 === 0 ? (
+            <CurveRight />
+          ) : (
+            <CurveLeft />
+          )}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
+  {/* Desktop */}
+  <div className="hidden md:block relative">
+  <div className="absolute top-[2px] left-[32%] -translate-x-1/2">
+    <CurveTop />
   </div>
-)}
-            </>
-              ))}
-            </div>
-          </div>
+
+  <div className="absolute top-[35px] right-[33%] translate-x-1/2">
+    <CurveBottom />
+  </div>
+
+  <div className="grid grid-cols-3 gap-[80px]">
+    {STEPS.map((step) => (
+      <div
+        key={step.number}
+        className="flex flex-col items-center text-center"
+      >
+        <StepIcon
+          number={step.number}
+          icon={step.icon}
+          variant={step.variant}
+        />
+
+        <h4 className="mt-6 text-[24px] font-bold text-[#203F6B]">
+          {step.title}
+        </h4>
+
+        <p className="mt-4 text-[14px] leading-[24px] text-[#525252] max-w-[250px]">
+          {step.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+</div>
 
         </div>
       </div>

@@ -1,7 +1,5 @@
-import { FaHeart } from "react-icons/fa";
 import { ImCamera } from "react-icons/im";
 import { IoHeartSharp } from "react-icons/io5";
-import { PiCoffee } from "react-icons/pi";
 
 const Helpe = () => {
   return (
@@ -53,7 +51,7 @@ const Helpe = () => {
               <span className="w-[32px] md:w-[48px] h-[32px] md:h-[48px] bg-[#203F6B] rounded-[8px] md:rounded-[14px] padding-[12px] flex justify-center items-center">
                 <IoHeartSharp
                   color="white"
-                  className="text-[14px] md:text-[24px]"
+                  className="text-[20px] md:text-[24px]"
                 />
               </span>
               <h4 className="text-[#203F6B] font-bold text-[16px] md:text-[24px]">

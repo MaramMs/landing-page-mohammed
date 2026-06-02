@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsPatchCheck } from "react-icons/bs";
-import { HiArrowLeft } from "react-icons/hi2";
+import { HiArrowLeft, HiCheckBadge } from "react-icons/hi2";
 
 const STATS = [
   { value: "5+", label: "منصات رسمية" },
@@ -19,24 +19,9 @@ const STATS = [
 
 const SOCIAL_LINKS = [
   {
-    href: "https://www.facebook.com/",
-    icon: FaFacebookF,
-    label: "Facebook",
-  },
-  {
-    href: "https://www.tiktok.com/",
-    icon: FaTiktok,
-    label: "TikTok",
-  },
-  {
-    href: "https://www.youtube.com/",
-    icon: FaYoutube,
-    label: "YouTube",
-  },
-  {
-    href: "https://www.snapchat.com/",
-    icon: FaSnapchatGhost,
-    label: "Snapchat",
+    href: "https://www.instagram.com/mohammed.alenany/",
+    icon: FaInstagram,
+    label: "Instagram",
   },
   {
     href: "https://www.twitter.com/mohammed_alenany/",
@@ -44,10 +29,30 @@ const SOCIAL_LINKS = [
     label: "X",
   },
   {
-    href: "https://www.instagram.com/mohammed.alenany/",
-    icon: FaInstagram,
-    label: "Instagram",
+    href: "https://www.snapchat.com/",
+    icon: FaSnapchatGhost,
+    label: "Snapchat",
   },
+  {
+    href: "https://www.youtube.com/",
+    icon: FaYoutube,
+    label: "YouTube",
+  },
+  {
+    href: "https://www.tiktok.com/",
+    icon: FaTiktok,
+    label: "TikTok",
+  },
+  {
+    href: "https://www.facebook.com/",
+    icon: FaFacebookF,
+    label: "Facebook",
+  },
+
+
+
+
+
 ] as const;
 
 const Hero = () => {
@@ -66,8 +71,7 @@ const Hero = () => {
               </p>
               <h1 className="text-[32px] md:text-[72px] font-extrabold leading-[1.05] tracking-tight text-[#203F6B]  xl:text-[64px]">
                 المؤثر السعودي
-                {/* <span className="block">المؤثر</span>
-                <span className="block">السعودي</span> */}
+             
               </h1>
             </div>
             <Link
@@ -81,7 +85,6 @@ const Hero = () => {
 
     <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1 after:content-[''] after:absolute after:rounded-full after:blur-[140px] after:w-[331px] md:after:w-[790px] after:aspect-square after:bg-[linear-gradient(163.37deg,rgba(77,150,255,0.6)_29.9%,rgba(70,137,232,0)_92.81%)] after:z-[1] after:translate-x-[0%]  md:after:translate-x-[22%] after:translate-y-[30%]  md:after:-translate-y-[11%]">
 
-<div className="relative  ">
   <Image
     src="/assets/hero.png"
     alt="محمد العنيني — المؤثر السعودي"
@@ -90,23 +93,18 @@ const Hero = () => {
     priority
     className="relative z-10 mx-auto h-[317px] md:h-[600px] w-full object-contain top-[-10%] rotate-y-180 left-[10%]"
   />
-</div>
-              {/* <div className=" "> */}
-                <div className="absolute left-[25%] md:left-[-28%] bottom-[5%] md:bottom-[11%] z-20  md:min-w-[237px] flex items-center justify-center gap-2 rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] md:px-[20px] md:py-[8px] shadow-lg sm:gap-3 px-[8px] py-[4px]">
+                <div className="absolute left-[25%] md:left-[-28%] bottom-[5%] md:bottom-[11%] z-20  md:min-w-[237px] flex items-center justify-center gap-[4px] rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] md:px-[20px] md:py-[8px] shadow-lg  px-[8px] py-[4px]">
                  
-                <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#203F6B] sm:size-8">
-                    <BsPatchCheck size={18} className="text-white" />
-                  </span>
+             
+
+<HiCheckBadge color='#FFFFFF' size={19} />
                   <span className="text-center md:text-[12px] font-semibold leading-snug text-[#EAEBF4] text-[10px]">
                     الصفحة الرسمية للمؤثر السعودي
                   </span>
-               
-                {/* </div> */}
-              {/* </div> */}
+         
             </div>
           </div>
 
-          {/* About — visual left in RTL */}
           <div className="order-3 flex flex-col gap-4 lg:order-3 md:col-span-1 ">
               <h2 className="text-center md:text-right md:text-[40px] font-bold text-[#203F6B] text-[32px]">
                 من أنا
@@ -121,7 +119,7 @@ const Hero = () => {
                 صانع محتوى ومؤثر سعودي، مختص بمشاركة العروض والخصومات والتغطيات الإعلامية عبر المنصات الرسمية في السعودية - المدينة المنورة وما جوارها.
                 </p>
                     <span
-                  className="absolute -bottom-1 left-10 text-[32px] font-serif leading-none text-[#4D96FF]"
+                  className="absolute bottom-[-26%] left-[36%] text-[45px] font-serif leading-none text-[#4D96FF]"
                   aria-hidden
                 >
                   &ldquo;

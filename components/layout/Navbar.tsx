@@ -2,24 +2,24 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "الحسابات", href: "#" },
-  { label: "خصم العنيني", href: "#about" },
-  { label: "العروض", href: "#accounts" },
-  { label: "مجالات التعاون", href: "#discount" },
-  { label: "التغطيات", href: "#team" },
-  { label: "التوثيق", href: "#partners" },
+  { label: "الحسابات", href: "#social" },
+  { label: "خصم العنيني", href: "#discount" },
+  { label: "العروض", href: "#offer" },
+  { label: "مجالات التعاون", href: "#help" },
+  { label: "التغطيات", href: "#interview" },
+  { label: "التوثيق", href: "#offical" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className=" sticky top-0 right-0 left-0 z-50 bg-[#FAFAFA] backdrop-blur-md shadow-sm border-b border-[#12183D] border-width-[0.5px]">
+    <nav className="sticky top-0 right-0 left-0 z-50 bg-[#FAFAFA] backdrop-blur-md shadow-sm border-b border-[#12183D] border-width-[0.5px]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-9.5 h-9.5  rounded-[50%] flex items-center justify-center">
-          <img  src='/assets/person.jpg' alt="Logo"  className="w-9.5 h-9.5 rounded-[50%] "/>
+          <div className="w-9.5 h-9.5 rounded-[50%] flex items-center justify-center">
+            <img src='/assets/person.jpg' alt="Logo" className="w-9.5 h-9.5 rounded-[50%]" />
           </div>
           <div>
             <p className="font-bold text-[#4D96FF] text-[18px] leading-tight">العنيني | aloniniyb</p>
@@ -41,14 +41,11 @@ export default function Navbar() {
           ))}
         </ul>
 
-        
-       
-          <button className="bg-[#4D96FF] text-white  text-sm py-[12px] px-[24px] rounded-2xl hidden md:block">تابعني</button>
-        
+        <button className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl hidden md:block">تابعني</button>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+          className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg className="w-6 h-6 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,9 +58,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Changed to absolute positioning to float over content */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+        <div className="absolute top-full left-0 right-0 md:hidden bg-white border-b border-gray-200 shadow-lg px-6 py-4 flex flex-col gap-4 z-50">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -74,8 +71,8 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-            <button className="btn-primary text-sm py-2 px-4 flex-1">تابعني</button>
-=        </div>
+          <button className="bg-[#4D96FF] text-white text-sm py-[12px] px-[24px] rounded-2xl w-full">تابعني</button>
+        </div>
       )}
     </nav>
   );

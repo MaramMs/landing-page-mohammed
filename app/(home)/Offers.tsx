@@ -1,29 +1,37 @@
 import { ReactNode } from "react";
 import { FaUser } from "react-icons/fa";
-import { LuBadgePercent } from "react-icons/lu";
 import { MdElectricBolt } from "react-icons/md";
+import { TbRosetteDiscountFilled } from "react-icons/tb";
 
 const STEPS = [
   {
     number: 1,
-    icon: <FaUser color="#4D96FF" className="text-[32px] md:50px" />,
+    icon: <FaUser color="#4D96FF" className="text-[32px] md:text-[50px]" />, 
     title: "المتابعة",
     description: 'من خلال متابعة حسابات "العنيني" يمكنك مشاهدة احدث العروض و التخفيضات',
     variant: "filled" as const,
-    curve: "border-l-[#203F6B] border-b-[#203F6B] rounded-bl-full  rotate-[30deg] ",
-
+    curve: (
+      <svg width="169" height="36" viewBox="0 0 169 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.500057 1.91673C69.2691 48.754 106.119 44.0774 168.366 0.500134" stroke="#203F6B" strokeLinecap="round" strokeDasharray="6 6"/>
+    </svg>
+    
+    ),
   },
   {
     number: 2,
-    icon: <LuBadgePercent color="#4D96FF" className="text-[32px] md:50px" />,
+    icon: <TbRosetteDiscountFilled color="#4D96FF" className="text-[32px] md:text-[50px]" />,
     title: "كود الخصم",
     description: 'استخدم كود الخصم الخاص ب "العنيني" عند الطلب والشراء',
     variant: "dashed" as const,
-    curve: "border-r-[#203F6B] border-b-[#203F6B] rounded-br-full  -rotate-20",
+    curve: (
+      <svg width="169" height="36" viewBox="0 0 169 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.500057 33.6963C69.2691 -13.1409 106.119 -8.46436 168.366 35.1129" stroke="#203F6B" strokeLinecap="round" strokeDasharray="6 6"/>
+    </svg>
+    ),
   },
   {
     number: 3,
-    icon: <MdElectricBolt color="#4D96FF" className="text-[32px] md:50px" />,
+    icon: <MdElectricBolt color="#4D96FF" className="text-[32px] md:text-[50px] rotate-148" />,
     title: "التخفيض",
     description: "يمكنك الحصول على التخفيض مباشرة من المتجر او مقدم الخدمة",
     variant: "dashed" as const,
@@ -40,7 +48,7 @@ const StepIcon = ({
   icon: ReactNode;
   variant: "filled" | "dashed";
 }) => (
-  <div className="flex justify-center relative mx-auto w-[60px] h-[60px] md:size-[100px] shrink-0">
+  <div  className="flex justify-center relative  w-[60px] h-[60px] md:size-[100px] shrink-0 ">
     <span className="absolute -top-1 -right-1 z-10 flex size-[25px] items-center justify-center rounded-full bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] text-[12px] font-semibold text-[#FAFAFA]">
       {number}
     </span>
@@ -49,7 +57,7 @@ const StepIcon = ({
         "flex w-[60px] h-[60px] md:size-full items-center justify-center rounded-full bg-[#FAFAFA]",
         variant === "filled"
           ? "shadow-[-2px_2px_10.8px_0px_#2626261A]"
-          : "border border-dashed border-[#4D96FF80]",
+          : "border border-dashed border-[#4D96FF80] bg-transparent",
       ].join(" ")}
     >
       {icon}
@@ -59,7 +67,7 @@ const StepIcon = ({
 
 const Offers = () => {
   return (
-    <section className="bg-[#EDF5FF]">
+    <section   id="offer" className="bg-[#EDF5FF]">
       <div className="mx-auto max-w-7xl px-[16px] md:px-0 py-[60px] md:py-25">
         <div className="mx-auto flex max-w-[960px] flex-col items-center gap-[40px] md:gap-10">
           
@@ -81,27 +89,11 @@ const Offers = () => {
 
           {/* Stepper */}
           <div className="relative w-full">
-
-         {/* Single continuous wave — desktop only */}
-         <svg
-              className="pointer-events-none absolute top-[50px] right-[11%] left-[11%] z-0 hidden h-[56px] w-[78%] -translate-y-1/2 md:block"
-              viewBox="0 0 600 56"
-              preserveAspectRatio="none"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden
-            >
-              <path
-                d="M 60 28 C 140 54, 160 54, 300 28 C 440 2, 460 2, 540 28"
-                stroke="#203F6B"
-                strokeOpacity="0.4"
-                strokeWidth="1.5"
-                strokeDasharray="6 6"
-                strokeLinecap="round"
-              />
-            </svg>
-            <div className="relative z-10 grid grid-cols-1 gap-0 md:grid-cols-3 gap-[24px] md:gap-8">
+    
+                    {/* Cleaned up grid gap classes */}
+            <div className="relative z-10 grid grid-cols-1 gap-[24px] md:grid-cols-5 md:gap-8 justify-center ">
               {STEPS.map((step) => (
+            <>
                 <div
                   key={step.number}
                   className="flex flex-col items-center gap-[24px] md:gap-8 text-center"
@@ -120,12 +112,15 @@ const Offers = () => {
                     </p>
                   </div>
 
-                  {step.curve && (
-                    <div
-                      className={`md:hidden  w-[69px] h-[90px] border-[1px] border-dashed border-transparent ${step.curve}`}
-                    />
-                  )}
+                
                 </div>
+
+{step.curve && (
+  <div className=" flex items-center justify-center">
+     {step.curve}
+  </div>
+)}
+            </>
               ))}
             </div>
           </div>

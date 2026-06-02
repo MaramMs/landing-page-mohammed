@@ -3,7 +3,7 @@ import { IoShieldOutline } from "react-icons/io5"
 
 const OfficalDocumentation =() =>{
     return (
-<section className="px-[16px] py-[60px]">
+<section id='offical' className="px-[16px] py-[60px]">
 <div className="max-w-7xl mx-auto py-2">
     <div className="flex flex-col justify-center items-center gap-[40px]">
     <div className="relative flex flex-col items-center gap-2 w-fit ">

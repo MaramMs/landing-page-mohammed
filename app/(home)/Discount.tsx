@@ -2,7 +2,6 @@ import { CiGift } from "react-icons/ci";
 import { FaPercent } from "react-icons/fa";
 import { LuBadgePercent } from "react-icons/lu";
 import { MdOutlineDiscount } from "react-icons/md";
-import DiscountBadge from "./DiscountBadge";
 import Image from "next/image";
 import discountImage from '../../public/assets/mobile.png'
 
@@ -24,7 +23,7 @@ const Discount = () => {
       </div>
       <div className="relative z-10 mx-auto max-w-7xl md:py-25 py-[60px] px-[16px]">
         <div className="flex flex-col gap-[43px]">
-          <div className="flex flex-col items-start gap-[24px] md:gap-[8px]">
+          <div className="flex flex-col items-start gap-[24px] md:gap-[16px]">
             <div className=" relative flex flex-col items-center gap-2 w-fit">
               <span className="text-[#EAEBF4] min-h-7 min-w-32 rounded-[50px] font-semibold text-[12px] border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] py-2 px-5 text-center">
                 خصم العنيني

@@ -72,7 +72,7 @@ const Offers = () => {
         <div className="mx-auto flex max-w-[960px] flex-col items-center gap-[40px] md:gap-10">
           
           {/* Header */}
-          <div className="flex flex-col items-center gap-2 text-center">
+          <div className="flex flex-col items-center gap-[16px] text-center">
             <div className="relative flex flex-col items-center gap-2">
               <span className="min-h-7 min-w-32 rounded-[50px] border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] px-5 py-2 text-center text-[12px] font-semibold text-[#EAEBF4]">
                 العروض

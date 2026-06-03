@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
+  FaQuoteLeft,
   FaSnapchatGhost,
   FaTiktok,
   FaYoutube,
@@ -19,40 +20,35 @@ const STATS = [
 
 const SOCIAL_LINKS = [
   {
-    href: "https://www.instagram.com/mohammed.alenany/",
+    href: "https://www.instagram.com/aloniniyb/",
     icon: FaInstagram,
     label: "Instagram",
   },
   {
-    href: "https://www.twitter.com/mohammed_alenany/",
+    href: "https://x.com/aloniniyb?s=21&t=15mbFQHY5hIlTxsZoViGmw",
     icon: FaXTwitter,
     label: "X",
   },
   {
-    href: "https://www.snapchat.com/",
+    href: "https://www.snapchat.com/@aloniniyb",
     icon: FaSnapchatGhost,
     label: "Snapchat",
   },
   {
-    href: "https://www.youtube.com/",
+    href: "https://www.youtube.com/@aloniniyb",
     icon: FaYoutube,
     label: "YouTube",
   },
   {
-    href: "https://www.tiktok.com/",
+    href: "https://www.tiktok.com/@aloniniyb",
     icon: FaTiktok,
     label: "TikTok",
   },
   {
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/aloniniyb/?_rdr",
     icon: FaFacebookF,
     label: "Facebook",
   },
-
-
-
-
-
 ] as const;
 
 const Hero = () => {
@@ -71,7 +67,6 @@ const Hero = () => {
               </p>
               <h1 className="text-[32px] md:text-[72px] font-extrabold leading-[1.05] tracking-tight text-[#203F6B]  xl:text-[64px]">
                 المؤثر السعودي
-             
               </h1>
             </div>
             <Link
@@ -83,47 +78,37 @@ const Hero = () => {
             </Link>
           </div>
 
-    <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1 after:content-[''] after:absolute after:rounded-full after:blur-[140px] after:w-[331px] md:after:w-[790px] after:aspect-square after:bg-[linear-gradient(163.37deg,rgba(77,150,255,0.6)_29.9%,rgba(70,137,232,0)_92.81%)] after:z-[1] after:translate-x-[0%]  md:after:translate-x-[22%] after:translate-y-[30%]  md:after:-translate-y-[11%]">
-
-  <Image
-    src="/assets/hero.png"
-    alt="محمد العنيني — المؤثر السعودي"
-    width={490}
-    height={639}
-    priority
-    className="relative z-10 mx-auto h-[317px] md:h-[600px] w-full object-contain top-[-10%] rotate-y-180 left-[10%]"
-  />
-                <div className="absolute left-[25%] md:left-[-28%] bottom-[5%] md:bottom-[11%] z-20  md:min-w-[237px] flex items-center justify-center gap-[4px] rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] md:px-[20px] md:py-[8px] shadow-lg  px-[8px] py-[4px]">
-                 
-             
-
-<HiCheckBadge color='#FFFFFF' size={19} />
-                  <span className="text-center md:text-[12px] font-semibold leading-snug text-[#EAEBF4] text-[10px]">
-                    الصفحة الرسمية للمؤثر السعودي
-                  </span>
-         
+          <div className="order-2 relative flex justify-center overflow-visible lg:order-1 md:col-span-1 after:content-[''] after:absolute after:rounded-full after:blur-[140px] after:w-[331px] md:after:w-[790px] after:aspect-square after:bg-[linear-gradient(163.37deg,rgba(77,150,255,0.6)_29.9%,rgba(70,137,232,0)_92.81%)] after:z-[1] after:translate-x-[0%]  md:after:translate-x-[22%] after:translate-y-[30%]  md:after:-translate-y-[11%]">
+            <Image
+              src="/assets/hero.png"
+              alt="محمد العنيني — المؤثر السعودي"
+              width={490}
+              height={639}
+              priority
+              className="relative z-10 mx-auto h-[317px] md:h-[600px] w-full object-contain top-[-10%] rotate-y-180 left-[10%]"
+            />
+            <div className="absolute left-[25%] md:left-[-28%] bottom-[5%] md:bottom-[11%] z-20  md:min-w-[237px] flex items-center justify-center gap-[4px] rounded-full border border-[#4D96FF80] bg-[linear-gradient(90deg,#4D96FF_4.33%,#203F6B_100%)] md:px-[20px] md:py-[8px] shadow-lg  px-[8px] py-[4px]">
+              <HiCheckBadge color="#FFFFFF" size={19} />
+              <span className="text-center md:text-[12px] font-semibold leading-snug text-[#EAEBF4] text-[10px]">
+                الصفحة الرسمية للمؤثر السعودي
+              </span>
             </div>
           </div>
 
           <div className="order-3 flex flex-col gap-4 lg:order-3 md:col-span-1 ">
-              <h2 className="text-center md:text-right md:text-[40px] font-bold text-[#203F6B] text-[32px]">
-                من أنا
-              </h2>
-         
+            <h2 className="text-center md:text-right md:text-[40px] font-bold text-[#203F6B] text-[32px]">
+              من أنا
+            </h2>
 
             <div className="flex flex-col gap-4">
-
-                   <div className="relative pr-1">
-            
+              <div className="relative pr-1">
+              
                 <p className="text-[16px] leading-[1.75] font-medium text-[#203F6B] sm:text-[15px]">
-                صانع محتوى ومؤثر سعودي، مختص بمشاركة العروض والخصومات والتغطيات الإعلامية عبر المنصات الرسمية في السعودية - المدينة المنورة وما جوارها.
-                </p>
-                    <span
-                  className="absolute bottom-[-26%] left-[36%] text-[45px] font-serif leading-none text-[#4D96FF]"
-                  aria-hidden
-                >
-                  &ldquo;
-                </span>
+  صانع محتوى ومؤثر سعودي، مختص بمشاركة العروض والخصومات
+  والتغطيات الإعلامية عبر المنصات الرسمية في السعودية - المدينة
+  المنورة وما جوارها.{" "}
+  <FaQuoteLeft className="inline-block align-middle flex-shrink-0 text-[#4D96FF]" />
+</p>
               </div>
               <div className="grid grid-cols-3 gap-6 border-b border-[#203F6B1A] pb-6 ">
                 {STATS.map((stat) => (
@@ -142,7 +127,9 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-col gap-4">
-                <p className="text-[16px] font-bold text-[#203F6B]">تابعني على</p>
+                <p className="text-[16px] font-bold text-[#203F6B]">
+                  تابعني على
+                </p>
                 <ul className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                   {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
                     <li key={label}>
@@ -168,7 +155,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
- 
-

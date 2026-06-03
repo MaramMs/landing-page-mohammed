@@ -25,7 +25,7 @@ export default function Footer() {
             <ul className="flex items-center gap-4">
               <li className="text-[#203F6B] text-[20px] font-bold w-10 h-10 rounded-[85px]  border-[#4D96FF80] bg-[#4689E8] flex items-center justify-center  ">
                 <a
-                  href="https://www.instagram.com/mohammed.alenany/"
+                  href="https://www.instagram.com/aloniniyb/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -34,7 +34,7 @@ export default function Footer() {
               </li>
               <li className="text-[#203F6B] text-[20px] font-bold w-10 h-10 rounded-[85px]  border-[#4D96FF80] bg-[#4689E8] flex items-center justify-center ">
                 <a
-                  href="https://www.twitter.com/mohammed_alenany/"
+                  href="https://x.com/aloniniyb?s=21&t=15mbFQHY5hIlTxsZoViGmw"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -44,7 +44,7 @@ export default function Footer() {
 
               <li className="text-[#203F6B] text-[20px] font-bold w-10 h-10 rounded-[85px]  border-[#4D96FF80] bg-[#4689E8] flex items-center justify-center ">
                 <a
-                  href="https://www.twitter.com/mohammed_alenany/"
+                  href="https://www.snapchat.com/@aloniniyb"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -54,7 +54,7 @@ export default function Footer() {
 
               <li className="text-[#203F6B] text-[20px] font-bold w-10 h-10 rounded-[85px]  border-[#4D96FF80] bg-[#4689E8] flex items-center justify-center ">
                 <a
-                  href="https://www.twitter.com/mohammed_alenany/"
+                  href="https://www.tiktok.com/@aloniniyb"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li className="text-[#203F6B] text-[20px] font-bold w-10 h-10 rounded-[85px]  border-[#4D96FF80] bg-[#4689E8] flex items-center justify-center ">
                 <a
-                  href="https://www.twitter.com/mohammed_alenany/"
+                  href="https://www.facebook.com/aloniniyb/?_rdr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li className="text-[#203F6B] text-[20px] font-bold w-10 h-10 rounded-[85px]  border-[#4D96FF80] bg-[#4689E8] flex items-center justify-center ">
                 <a
-                  href="https://www.twitter.com/mohammed_alenany/"
+                  href="https://www.youtube.com/@aloniniyb"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -97,18 +97,28 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Contact */}
-          <div className="col-span-2 md:col-span-1">
-            <h4 className="font-bold mb-4 text-[14px]">التواصل</h4>
-            <ul className="flex flex-col gap-[16px] text-blue-200 text-sm">
-             {[ "العروض والخصومات", "للاعلانات", "للتعاون والشركات"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="hover:text-accent transition-colors text-[16px] text-[#FAFAFA]">{l}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+<div className="col-span-2 md:col-span-1">
+  <h4 className="font-bold mb-4 text-[14px]">التواصل</h4>
+  <ul className="flex flex-col gap-[16px] text-blue-200 text-sm">
+    {[
+      { label: "العروض والخصومات", href: "#" },
+      { label: "للاعلانات", href: "https://wa.me/0512312312?text=مرحباً%2C%20أود%20الاستفسار%20عن%20الإعلانات" },
+      { label: "للتعاون والشركات", href: "https://wa.me/0512312312?text=مرحباً%2C%20أود%20الاستفسار%20عن%20التعاون%20والشراكات" },
+    ].map((item) => (
+      <li key={item.label}>
+        <a
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-accent transition-colors text-[16px] text-[#FAFAFA]"
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
         </div>
 
    

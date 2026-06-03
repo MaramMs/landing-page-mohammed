@@ -8,14 +8,13 @@ import discountImage from '../../public/assets/mobile.png'
 const Discount = () => {
   return (
     <section id="discount" className="relative overflow-hidden bg-[#FAFAFA]">
-      {/* <DiscountBadge /> */}
       <div
         className="pointer-events-none absolute -left-[5%] top-[27%] md:top-[-22%] md:left-[-6%]  z-11 md:w-[514px] md:h-[514px] md:rounded-full md:bg-[#EDF5FF33]"
         aria-hidden
       >
         <Image
           src={discountImage}
-          alt=""
+          alt="discounnt"
           className="w-[124px] h-[126px] md:w-[514px] md:h-[514px] object-contain md:object-cover"
           width={514}
           height={514}

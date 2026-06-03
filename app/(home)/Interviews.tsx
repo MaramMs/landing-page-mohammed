@@ -56,7 +56,7 @@ const Interviews = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-[24px]">
-            <div className="col-span-3 md:col-span-1 flex flex-col bg-[#FFFFFF] rounded-[20px] overflow-hidden">
+            <a target="_blank" href="https://okaznews.net/mix/2508/31343/" className="col-span-3 md:col-span-1 flex flex-col bg-[#FFFFFF] rounded-[20px] overflow-hidden cursor-pointer">
               <Image
                 src={img1}
                 alt=""
@@ -71,12 +71,12 @@ const Interviews = () => {
 
                   <span className="text-[16px] text-[#203F6B]"> 2025</span>
                 </div>
-                <a target="_blank" href="https://okaznews.net/mix/2508/31343/" className="text-[#203F6B] text-[14px] md:text-[18px] font-bold cursor-pointer ">
+                <h2  className="text-[#203F6B] text-[14px] md:text-[18px] font-bold  ">
                 محمد العنيني.. حين تتحول القصة إلى تأثير
-                </a>
+                </h2>
               </div>
-            </div>
-            <div className="col-span-3 md:col-span-1 flex flex-col bg-[#FFFFFF] rounded-[20px] overflow-hidden">
+            </a>
+            <a target="_blank" href="https://www.egynt.net/%d9%85%d8%ad%d9%85%d8%af-%d8%a7%d9%84%d8%b9%d9%86%d9%8a%d9%86%d9%8a/" className="col-span-3 md:col-span-1 flex flex-col bg-[#FFFFFF] rounded-[20px] overflow-hidden cursor-pointer">
               <Image
                 src={img2}
                 alt=""
@@ -91,12 +91,12 @@ const Interviews = () => {
 
                   <span> 2025</span>
                 </div>
-                <a  target="_blank" href="https://www.egynt.net/%d9%85%d8%ad%d9%85%d8%af-%d8%a7%d9%84%d8%b9%d9%86%d9%8a%d9%86%d9%8a/" className="text-[#203F6B]  text-[18px] font-bold cursor-pointer ">
+                <h2   className="text-[#203F6B]  text-[18px] font-bold  ">
                 محمد العنيني: عقد من التأثير والإعلام الهادف
-                </a>
+                </h2>
               </div>
-            </div>
-            <div className="col-span-3 md:col-span-1 flex flex-col bg-[#FFFFFF] rounded-[20px] overflow-hidden">
+            </a>
+            <a target="_blank" href="https://okaznews.net/mix/2209/33248/" className="col-span-3 md:col-span-1 flex flex-col bg-[#FFFFFF] rounded-[20px] overflow-hidden cursor-pointer">
               <Image
                 src={img3}
                 alt=""
@@ -111,11 +111,11 @@ const Interviews = () => {
 
                   <span> 2025</span>
                 </div>
-                <a  target="_blank" href="https://okaznews.net/mix/2209/33248/" className="text-[#203F6B]  text-[18px] font-bold  cursor-pointer">
+                <h2   className="text-[#203F6B]  text-[18px] font-bold  ">
                 مقهى توق… حكاية فُقد وحلم لم يكتمل
-                </a>
+                </h2>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
